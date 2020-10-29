@@ -21,6 +21,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 killall Finder
 
 システム環境設定のDockで、最近使ったアプリケーションをDockに表示を無効にする。
+Spotlightのキーボードショートカットを無効にする。
 
 ## brew
 
@@ -106,12 +107,13 @@ brew cask install visual-studio-code
 
 設定の同期というのがあるのですが、プレビュー機能で時々動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
 
+curlでさっくと持ってきて、以下の場所に入れます。
+
 ```
 ~/Library/Application\ Support/Code/User/settings.json
 ```
 
 
-curlでさっくと持ってきます。
 
 ## その他
 
@@ -166,37 +168,78 @@ brew install gzip
 brew install jq
 brew install nkf
 brew install unzip
-echo 'export PATH="/usr/local/opt/unzip/bin:$PATH"' >> ~/.zshrc
 brew install tree
 brew tap homebrew/services
+```
+
+インストール後.zshrcに以下の設定を入れる。
+
+```
+export PATH="/usr/local/opt/unzip/bin:$PATH"
 ```
 
 ## アップデートして入れたい
 
 ```
 brew install curl
-echo 'export PATH="/usr/local/opt/curl/bin:$PATH"' >> ~/.zshrc
 brew install nano
 brew install coreutils
-echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.zshrc
 brew install findutils
-echo 'export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"' >> ~/.zshrc
-echo 'export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"' >> ~/.zshrc
 brew install gnu-sed
-echo 'export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.zshrc
-echo 'export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"' >> ~/.zshrc
 ```
+
+インストール後.zshrcに以下の設定を入れる。
+
+```
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+```
+
 
 ## 謎
 
 ```
 brew install cowsay
 brew tap fumiyas/echo-sd
+brew install echo-sd
 ```
 
-## 開発言語の最新化
+## 開発言語などの最新化
+
+
+### PostgresSQL
+
+```
+brew install postgresql
+```
+
+インストール後.zshrcに以下の設定を入れる。
+
+```
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+export PATH="/usr/local/opt/krb5/sbin:$PATH"
+```
+データベース起動は開発時に行うのでインストールだけします。
+インストールしておかないと、PHPなどがインストール時にエラーが発生するので入れておきます。
+
+### MySQL
+
+```
+brew install mysql
+```
+
+データベース起動は開発時に行うのでインストールだけします。
 
 ### Python
+
+pyenvを入れて最新バージョンを入れる。
+
 
 ```
 brew install pyenv
@@ -219,6 +262,8 @@ fi
 参考
 [https://shunsuke.me/ja/tech/how-to-setup-dev-env-on-macos/#pyenv](https://shunsuke.me/ja/tech/how-to-setup-dev-env-on-macos/#pyenv)
 
+フレームワークは適宜入れる。
+
 ### Ruby
 
 rbenvを入れて最新バージョンを入れる。
@@ -230,14 +275,72 @@ rbenv install 最新版
 rbenv global 最新版
 ```
 
+フレームワークは適宜入れる。
+
+
 ### PHP
+
+事前にPHPが使用する物を入れておく。
+
+```
+brew install automake libxml2  mcrypt mhash pcre zlib bzip2 libzip
+```
+
+autoconf
+openssl
+readline
+
+インストール後.zshrcに以下の設定を入れる。
+```
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/bzip2/bin:$PATH"
+```
+
+先にpearを入れないとコンフィグレーションができないので下記を参考にpearを入れておく。
+
+[https://qiita.com/applexco/items/f10e87477dc5d41cf751](https://qiita.com/applexco/items/f10e87477dc5d41cf751)
+
+インストール後.zshrcに以下の設定を入れる。
+
+```
+export PATH="/Users/ユーザー名/pear/bin:$PATH"
+```
+
+以下を参考にしてPHPBrewを入れる。
+
+[https://github.com/phpbrew/phpbrew/blob/master/README.ja.md](https://github.com/phpbrew/phpbrew/blob/master/README.ja.md)
+
+Defaultのvariantsにデータベースなどを追加して入れます。
+
+```
+phpbrew install 最新版 +default +dbs +curl +openssl=/usr/local/Cellar/openssl@1.1/1.1.1h
+```
+
+フレームワークは適宜入れる。
+
 
 ### Perl
 
-### Java
+perlbrewを入れて最新バージョンを入れる。
+
+```
+curl -L http://xrl.us/perlbrewinstall | bash
+```
+インストール後.zshrcに以下の設定を入れる。
+
+```
+source ~/perl5/perlbrew/etc/bashrc
+```
+
+最新版を入れる。
+
+```
+perlbrew available
+perlbrew install perl-最新版
+perlbrew switch perl-最新版
+```
+
 
 ### Node
 
-### MySQL
-
-### PostgresSQL
