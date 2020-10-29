@@ -113,8 +113,6 @@ Dockerなどもありますが、必要に応じてインストールします�
 
 # git
 
-
-
 ```
 brew install git
 ```
