@@ -117,6 +117,13 @@ Dockerなどもありますが、必要に応じてインストールします�
 brew install git
 ```
 
+初期設定
+```
+git config --global user.name "名前"
+git config --global user.email メールアドレス
+git config --global init.defaultBranch main
+```
+
 GitHubにSSH keyの追加をします。
 以下の2つを確認しながらやります。
 
