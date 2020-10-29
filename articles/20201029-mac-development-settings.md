@@ -137,8 +137,9 @@ GitHub アカウントへの新しい SSH キーの追加
 
 # tmux
 
+```
 brew install tmux
-
+```
 
 
 
@@ -151,49 +152,45 @@ brew install wget
 brew install gzip
 brew install jq
 brew install nkf
-brew tap homebrew/services
-
 brew install unzip
 echo 'export PATH="/usr/local/opt/unzip/bin:$PATH"' >> ~/.zshrc
-
 brew install tree
-
+brew tap homebrew/services
 ```
 
 # アップデートして入れたい
 
+```
 brew install curl
 echo 'export PATH="/usr/local/opt/curl/bin:$PATH"' >> ~/.zshrc
-
 brew install nano
-
-
 brew install coreutils
 echo 'export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"' >> ~/.zshrc
-
 brew install findutils
 echo 'export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"' >> ~/.zshrc
 echo 'export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"' >> ~/.zshrc
-
-
 brew install gnu-sed
 echo 'export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.zshrc
 echo 'export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"' >> ~/.zshrc
-
+```
 
 
 
 
 # 謎
 
-
+```
 brew install cowsay
-
 brew tap fumiyas/echo-sd
+```
 
 # 開発言語の最新化
 ## Python
 ## Ruby
+
+rbenvを入れて最新バージョンを入れる。
+
+
 ## PHP
 ## Perl
 ## Java
