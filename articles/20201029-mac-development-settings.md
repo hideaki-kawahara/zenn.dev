@@ -12,6 +12,15 @@ MacBookを壊したので修理に出した。
 そのため、macOSで開発環境を整え直します。
 そう、できるだけコマンドラインだけで！
 
+# 設定変更
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+その後、Finderを強制終了して再起動します。
+
+killall Finder
+
+システム環境設定のDockで、最近使ったアプリケーションをDockに表示を無効にする。
+
 # brew
 
 コマンドラインで何でもやるためにbrewを入れます。
@@ -113,6 +122,19 @@ Dockerなどもありますが、必要に応じてインストールします�
 残りはコマンドライン系です。
 快適にするために、どんどん入れていきます。
 
+# iterm2
+
+brew cask install iterm2
+
+# tmux
+
+```
+brew install tmux
+```
+
+
+
+
 # git
 
 ```
@@ -134,14 +156,6 @@ GitHubにSSH keyの追加をします。
 
 GitHub アカウントへの新しい SSH キーの追加
 [https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
-
-# tmux
-
-```
-brew install tmux
-```
-
-
 
 
 
@@ -186,10 +200,32 @@ brew tap fumiyas/echo-sd
 
 # 開発言語の最新化
 ## Python
+
+brew install pyenv
+pyenv install --list | grep -v '[a-z]'
+pyenv install 最新版
+pyenv versions
+
+tumxを起動しているとpyenvが切り替わらないので
+.zshrcのtumx起動後にpyenv initを入れる。
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 ## Ruby
 
 rbenvを入れて最新バージョンを入れる。
 
+```
+brew install rbenv
+rbenv install --list
+rbenv install 最新版
+rbenv global 最新版
+```
 
 ## PHP
 ## Perl
