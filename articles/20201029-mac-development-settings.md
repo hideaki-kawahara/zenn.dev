@@ -1,8 +1,10 @@
+---
 title: "macOSで開発環境を整える、できるだけコマンドラインだけで"
 emoji: "💻"
 type: "tech"
 topics: ["github", "mac", "zsh"]
 published: false
+---
 
 # MacBookを壊した
 
