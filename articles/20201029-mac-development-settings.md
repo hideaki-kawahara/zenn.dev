@@ -12,7 +12,8 @@ MacBookを壊したので修理に出した。
 そのため、macOSで開発環境を整え直します。
 そう、できるだけコマンドラインだけで！
 
-# 設定変更
+## 設定変更
+
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
 その後、Finderを強制終了して再起動します。
@@ -21,7 +22,7 @@ killall Finder
 
 システム環境設定のDockで、最近使ったアプリケーションをDockに表示を無効にする。
 
-# brew
+## brew
 
 コマンドラインで何でもやるためにbrewを入れます。
 Safariを起動・・・しないでいきます。
@@ -30,11 +31,11 @@ Safariを起動・・・しないでいきます。
 curl -sS https://brew.sh/index_ja | sed -e 's/<[^>]*>//g' | grep 'curl -fsSL' | sed -e 's/^[ \t]*//' | sed -e 's/^$ //' | bash
 ```
 
-## 説明
+### 説明
 
 brewのサイトから情報を取得して、sedでHTMLタグの抜いてインストールのところを引っ張りだして実行させてます。
 
-# Homebrew caskについて
+## Homebrew caskについて
 
 Homebrew 2.2ぐらいから、cask関連の初期設定が不要になっているので、いきなりインストールができます。
 2020年10月27日現在 Homebrewのバージョンは2.5.7です。
@@ -49,7 +50,7 @@ Homebrew 2.2ぐらいから、cask関連の初期設定が不要になってい�
 
 これらをコマンドラインからインストールしていきます。
 
-# Google IME
+## Google IME
 
 再起動が必要なGoogle IMEを入れます。
 
@@ -60,7 +61,7 @@ brew cask install google-japanese-ime
 システム環境設定から設定を行ってから起動すると再起動を要求されるので再起動します。
 なお、既存のIMEを削除するときは、Google IMEの英語入力を追加することを忘れずに行ってください。
 
-# Google Chrome
+## Google Chrome
 
 認証とかでブラウザが必要になるので、Google Chromeを入れます。
 
@@ -74,8 +75,7 @@ Google Accountなどにログインしておきます。
 open /Applications/Google\ Chrome.app/
 ```
 
-
-# Slack
+## Slack
 
 仕事のやり取りに必須なSlackもcaskにあるのでコマンドラインからインストールします。
 ログイン時にブラウザが起動します。
@@ -84,7 +84,7 @@ open /Applications/Google\ Chrome.app/
 brew cask install slack
 ```
 
-# Zoom
+## Zoom
 
 Zoomもcaskにあるのでコマンドラインからインストールします。
 zoomusなので注意！
@@ -94,7 +94,7 @@ zoomusなので注意！
 brew cask install zoomus
 ```
 
-# VSCode
+## VSCode
 
 VSCodeもcaskにあるのでコマンドラインからインストールします。
 
@@ -102,7 +102,7 @@ VSCodeもcaskにあるのでコマンドラインからインストールしま�
 brew cask install visual-studio-code
 ```
 
-## 設定ファイル
+### 設定ファイル
 
 設定の同期というのがあるのですが、プレビュー機能で時々動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
 
@@ -113,7 +113,7 @@ brew cask install visual-studio-code
 
 curlでさっくと持ってきます。
 
-# その他
+## その他
 
 Dockerなどもありますが、必要に応じてインストールします。
 詳しくはHomebrewのcaskリストを参照してください。
@@ -122,20 +122,21 @@ Dockerなどもありますが、必要に応じてインストールします�
 残りはコマンドライン系です。
 快適にするために、どんどん入れていきます。
 
-# iterm2
+## iterm2
 
+```
 brew cask install iterm2
+```
 
-# tmux
+見やすい色に変更します。
+
+## tmux
 
 ```
 brew install tmux
 ```
 
-
-
-
-# git
+## git
 
 ```
 brew install git
@@ -157,9 +158,7 @@ GitHubにSSH keyの追加をします。
 GitHub アカウントへの新しい SSH キーの追加
 [https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
-
-
-# 個人的に入れたい
+## 個人的に入れたい
 
 ```
 brew install wget
@@ -172,7 +171,7 @@ brew install tree
 brew tap homebrew/services
 ```
 
-# アップデートして入れたい
+## アップデートして入れたい
 
 ```
 brew install curl
@@ -188,35 +187,39 @@ echo 'export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"' >> ~/.zshrc
 echo 'export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"' >> ~/.zshrc
 ```
 
-
-
-
-# 謎
+## 謎
 
 ```
 brew install cowsay
 brew tap fumiyas/echo-sd
 ```
 
-# 開発言語の最新化
-## Python
+## 開発言語の最新化
 
+### Python
+
+```
 brew install pyenv
 pyenv install --list | grep -v '[a-z]'
 pyenv install 最新版
 pyenv versions
+```
 
 tumxを起動しているとpyenvが切り替わらないので
 .zshrcのtumx起動後にpyenv initを入れる。
 
-
+```
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+```
 
-## Ruby
+参考
+[https://shunsuke.me/ja/tech/how-to-setup-dev-env-on-macos/#pyenv](https://shunsuke.me/ja/tech/how-to-setup-dev-env-on-macos/#pyenv)
+
+### Ruby
 
 rbenvを入れて最新バージョンを入れる。
 
@@ -227,10 +230,14 @@ rbenv install 最新版
 rbenv global 最新版
 ```
 
-## PHP
-## Perl
-## Java
-## Node.js
-# データベースのインストール
-## MySQL
-## PostgresSQL
+### PHP
+
+### Perl
+
+### Java
+
+### Node
+
+### MySQL
+
+### PostgresSQL
