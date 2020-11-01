@@ -106,7 +106,6 @@ brew cask install visual-studio-code
 ### 設定ファイル
 
 設定の同期というのがあるのですが、プレビュー機能で時々動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
-
 curlでさっくと持ってきて、以下の場所に入れます。
 
 ```
@@ -137,6 +136,18 @@ brew cask install iterm2
 ```
 brew install tmux
 ```
+私は設定ファイルをGitHubにバックアップしてます。
+curlでさっくと持ってきて、以下の場所に入れます。
+もしくは検索して入れます。
+
+```
+~/.tmux.conf
+```
+
+自動起動は以下を参照して
+
+[https://hkmc.jp/note/linux/tmux_autostart.html](https://hkmc.jp/note/linux/tmux_autostart.html)
+
 
 ## git
 
@@ -336,11 +347,9 @@ source ~/perl5/perlbrew/etc/bashrc
 最新版を入れる。
 
 ```
+perlbrew init
+perlbrew install-patchperl
 perlbrew available
-perlbrew install perl-最新版
+perlbrew install --notest perl-最新版
 perlbrew switch perl-最新版
 ```
-
-
-### Node
-
