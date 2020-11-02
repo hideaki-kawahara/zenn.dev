@@ -210,6 +210,36 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 ```
 
+# データベースや言語で必要なので入れる
+
+```
+brew install autoconf
+brew install openssl
+brew install readline
+brew install sqlite
+brew install automake
+brew install libxml2
+brew install mcrypt
+brew install mhash
+brew install pcre
+brew install zlib
+brew install bzip2
+brew install libzip
+brew install icu4c
+brew install krb5
+```
+
+インストール後.zshrcに以下の設定を入れる。
+```
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/bzip2/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+export PATH="/usr/local/opt/krb5/sbin:$PATH"
+```
+
 
 ## 謎
 
@@ -228,22 +258,22 @@ brew install echo-sd
 brew install postgresql
 ```
 
-インストール後.zshrcに以下の設定を入れる。
-
-```
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/krb5/bin:$PATH"
-export PATH="/usr/local/opt/krb5/sbin:$PATH"
-```
 データベース起動は開発時に行うのでインストールだけします。
 インストールしておかないと、PHPなどがインストール時にエラーが発生するので入れておきます。
+
+13.0が入りました。
+$ postgres --version
+postgres (PostgreSQL) 13.0
 
 ### MySQL
 
 ```
 brew install mysql
 ```
+
+8.0.22が入りました。
+$ mysql --version
+mysql  Ver 8.0.22 for osx10.15 on x86_64 (Homebrew)
 
 データベース起動は開発時に行うのでインストールだけします。
 
@@ -292,22 +322,6 @@ rbenv global 最新版
 ### PHP
 
 事前にPHPが使用する物を入れておく。
-
-```
-brew install automake libxml2  mcrypt mhash pcre zlib bzip2 libzip
-```
-
-autoconf
-openssl
-readline
-
-インストール後.zshrcに以下の設定を入れる。
-```
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="/usr/local/opt/bzip2/bin:$PATH"
-```
-
 先にpearを入れないとコンフィグレーションができないので下記を参考にpearを入れておく。
 
 [https://qiita.com/applexco/items/f10e87477dc5d41cf751](https://qiita.com/applexco/items/f10e87477dc5d41cf751)
