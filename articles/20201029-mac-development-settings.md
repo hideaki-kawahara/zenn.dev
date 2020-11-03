@@ -14,6 +14,8 @@ MacBookを壊したので修理に出した。
 
 ## 設定変更
 
+英語キーボードなので、caps lockをControl keyに変更します。
+
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
 その後、Finderを強制終了して再起動します。
@@ -39,7 +41,7 @@ brewのサイトから情報を取得して、sedでHTMLタグの抜いてイン
 ## Homebrew caskについて
 
 Homebrew 2.2ぐらいから、cask関連の初期設定が不要になっているので、いきなりインストールができます。
-2020年10月27日現在 Homebrewのバージョンは2.5.7です。
+2020年10月27日現在Homebrewのバージョンは2.5.7です。
 インストールできるアプリはサイトにあるので必要なものをインストールしましょう。
 [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
 
@@ -47,9 +49,9 @@ Homebrew 2.2ぐらいから、cask関連の初期設定が不要になってい�
 * Google Chrome
 * Slack
 * Zoom
-* VSCode
+* VS Code
 
-これらをコマンドラインからインストールしていきます。
+これらをコマンドラインからインストールします。
 
 ## Google IME
 
