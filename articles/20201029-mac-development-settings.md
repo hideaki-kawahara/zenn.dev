@@ -19,8 +19,11 @@ MacBookを壊したので修理に出した。
   * Dockで、最近使ったアプリケーションをDockに表示を無効にする。
   * Spotlightのキーボードショートカットを無効にする。
 * 使わないけどファインダーですべてのファイルを表示にしておく。（コマンドラインで以下を入力する）
-  * defaults write com.apple.finder AppleShowAllFiles TRUE
-  * killall Finder
+
+```
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+```
 
 ## brew
 
@@ -37,18 +40,16 @@ brewのサイトから情報を取得して、sedでHTMLタグの抜いてイン
 
 ## Homebrew caskについて
 
-Homebrew 2.2ぐらいから、cask関連の初期設定が不要になっているので、いきなりインストールができます。
-2020年10月27日現在Homebrewのバージョンは2.5.7です。
 インストールできるアプリはサイトにあるので必要なものをインストールしましょう。
 [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
+
+とりあえず以下のものを、これらをコマンドラインからインストールします。
 
 * Google IME
 * Google Chrome
 * Slack
 * Zoom
 * VS Code
-
-これらをコマンドラインからインストールします。
 
 ## Google IME
 
@@ -121,8 +122,7 @@ Dockerなどもありますが、必要に応じてインストールします�
 詳しくはHomebrewのcaskリストを参照してください。
 [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
 
-残りはコマンドライン系です。
-快適にするために、どんどん入れていきます。
+次はコマンドラインに関するものを、どんどん入れていきます。
 
 ## iterm2
 
@@ -370,3 +370,8 @@ perlbrew available
 perlbrew install --notest perl-最新版
 perlbrew switch perl-最新版
 ```
+
+## 終わりに
+macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
+
+今後、macOS Big SurやApple Silicon Macになったとき、どんな感じで環境構築が変わるのだろうか？楽しみです。
