@@ -1,8 +1,8 @@
 ---
-title: "macOSで開発環境を整える、できるだけコマンドラインだけで"
+title: "macOS Catalinaで開発環境を整える"
 emoji: "💻"
 type: "tech"
-topics: ["github", "mac", "zsh"]
+topics: ["github", "mac", "zsh", "Catalina"]
 published: false
 ---
 
@@ -10,20 +10,17 @@ published: false
 
 MacBookを壊したので修理に出した。
 そのため、macOSで開発環境を整え直します。
-そう、できるだけコマンドラインだけで！
+もうすぐmacOS Big Surが出てしまうので（記載日2020年11月6日）、Catalinaでの対応方法を記載しておきます。
 
 ## 設定変更
 
-英語キーボードなので、caps lockをControl keyに変更します。
-
-defaults write com.apple.finder AppleShowAllFiles TRUE
-
-その後、Finderを強制終了して再起動します。
-
-killall Finder
-
-システム環境設定のDockで、最近使ったアプリケーションをDockに表示を無効にする。
-Spotlightのキーボードショートカットを無効にする。
+* システム環境設定で以下を変更する。
+  * 英語キーボードなので、caps lockをControl keyに変更します。
+  * Dockで、最近使ったアプリケーションをDockに表示を無効にする。
+  * Spotlightのキーボードショートカットを無効にする。
+* 使わないけどファインダーですべてのファイルを表示にしておく。（コマンドラインで以下を入力する）
+  * defaults write com.apple.finder AppleShowAllFiles TRUE
+  * killall Finder
 
 ## brew
 
@@ -67,6 +64,7 @@ brew cask install google-japanese-ime
 ## Google Chrome
 
 認証とかでブラウザが必要になるので、Google Chromeを入れます。
+これでSafariを起動せずにChromeを入れることができます。
 
 ```
 brew cask install google-chrome
@@ -77,6 +75,7 @@ Google Accountなどにログインしておきます。
 ```
 open /Applications/Google\ Chrome.app/
 ```
+起動後はデフォルトブラウザをChromeに変更しておきます。
 
 ## Slack
 
@@ -107,7 +106,7 @@ brew cask install visual-studio-code
 
 ### 設定ファイル
 
-設定の同期というのがあるのですが、プレビュー機能で時々動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
+設定の同期というのがあるのですが、プレビュー機能でときどき動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
 curlでさっくと持ってきて、以下の場所に入れます。
 
 ```
@@ -158,6 +157,7 @@ brew install git
 ```
 
 初期設定
+Default brunchはmainにしておきます。
 ```
 git config --global user.name "名前"
 git config --global user.email メールアドレス
@@ -182,7 +182,6 @@ brew install jq
 brew install nkf
 brew install unzip
 brew install tree
-brew tap homebrew/services
 ```
 
 インストール後.zshrcに以下の設定を入れる。
@@ -339,6 +338,7 @@ export PATH="/Users/ユーザー名/pear/bin:$PATH"
 [https://github.com/phpbrew/phpbrew/blob/master/README.ja.md](https://github.com/phpbrew/phpbrew/blob/master/README.ja.md)
 
 Defaultのvariantsにデータベースなどを追加して入れます。
+2020年11月1日現在openssl@1.1でした。
 
 ```
 phpbrew install 最新版 +default +dbs +curl +openssl=/usr/local/Cellar/openssl@1.1/1.1.1h
@@ -361,6 +361,7 @@ source ~/perl5/perlbrew/etc/bashrc
 ```
 
 最新版を入れる。
+--notestを入れないと物凄く遅いです。
 
 ```
 perlbrew init
