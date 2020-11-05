@@ -40,6 +40,7 @@ brewのサイトから情報を取得して、sedでHTMLタグの抜いてイン
 
 ## Homebrew caskについて
 
+GUIアプリをコマンドでインストールするものです。
 インストールできるアプリはサイトにあるので必要なものをインストールしましょう。
 [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
 
@@ -50,6 +51,8 @@ brewのサイトから情報を取得して、sedでHTMLタグの抜いてイン
 * Slack
 * Zoom
 * VS Code
+* Docker
+* iTerm2
 
 ## Google IME
 
@@ -107,22 +110,20 @@ brew cask install visual-studio-code
 
 ### 設定ファイル
 
-設定の同期というのがあるのですが、プレビュー機能でときどき動かなくなるので、私は設定ファイルをGitHubにバックアップしてます。
-curlでさっくと持ってきて、以下の場所に入れます。
+設定の同期というのがあるのですが、プレビュー機能らしく動かなくなることがあります。
+そのため、設定ファイルをCloudに置いてあるので、curlでさっくと持ってきて、以下の場所に入れます。
 
 ```
 ~/Library/Application\ Support/Code/User/settings.json
 ```
 
 
+## Docker
 
-## その他
-
-Dockerなどもありますが、必要に応じてインストールします。
-詳しくはHomebrewのcaskリストを参照してください。
-[https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
-
-次はコマンドラインに関するものを、どんどん入れていきます。
+```
+brew install docker
+brew cask install docker
+```
 
 ## iterm2
 
@@ -134,11 +135,12 @@ brew cask install iterm2
 
 ## tmux
 
+ここからコマンドライン関連です。
+
 ```
 brew install tmux
 ```
-私は設定ファイルをGitHubにバックアップしてます。
-curlでさっくと持ってきて、以下の場所に入れます。
+設定ファイルをCloudに置いてあるので、curlでさっくと持ってきて、以下の場所に入れます。
 もしくは検索して入れます。
 
 ```
@@ -250,10 +252,10 @@ brew tap fumiyas/echo-sd
 brew install echo-sd
 ```
 
-## 開発言語などの最新化
-
-
 ### PostgresSQL
+
+ここから開発言語やデータベースなどを入れていきます。
+
 
 ```
 brew install postgresql
@@ -281,7 +283,7 @@ mysql  Ver 8.0.22 for osx10.15 on x86_64 (Homebrew)
 ### Python
 
 pyenvを入れて最新バージョンを入れる。
-
+（brew doctorでのWarningが出るが無視）
 
 ```
 brew install pyenv
