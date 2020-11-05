@@ -3,7 +3,7 @@ title: "macOS Catalinaで開発環境を整える"
 emoji: "💻"
 type: "tech"
 topics: ["github", "mac", "zsh", "Catalina"]
-published: false
+published: true
 ---
 
 # MacBookを壊した
