@@ -213,7 +213,7 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 ```
 
-# 開発言語やデータベースで必要になるので入れる
+## 開発言語やデータベースで必要になるので入れる
 
 ```
 brew install autoconf
