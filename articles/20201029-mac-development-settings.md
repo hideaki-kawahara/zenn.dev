@@ -145,9 +145,9 @@ curlでさっくと持ってきて、以下の場所に入れます。
 ~/.tmux.conf
 ```
 
-自動起動は以下を参照して
+自動起動は以下のSolution 6を参照しました。
 
-[https://hkmc.jp/note/linux/tmux_autostart.html](https://hkmc.jp/note/linux/tmux_autostart.html)
+[https://qiita.com/ssh0/items/a9956a74bff8254a606a](https://qiita.com/ssh0/items/a9956a74bff8254a606a)
 
 
 ## git
@@ -156,7 +156,7 @@ curlでさっくと持ってきて、以下の場所に入れます。
 brew install git
 ```
 
-初期設定
+初期設定は以下のようにしておきます。
 Default brunchはmainにしておきます。
 ```
 git config --global user.name "名前"
@@ -164,7 +164,7 @@ git config --global user.email メールアドレス
 git config --global init.defaultBranch main
 ```
 
-GitHubにSSH keyの追加をします。
+次にSSH Keyを作り、GitHubに登録します。
 以下の2つを確認しながらやります。
 
 新しい SSH キーを生成して ssh-agent に追加する
@@ -211,7 +211,7 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 ```
 
-# データベースや言語で必要なので入れる
+# 開発言語やデータベースで必要になるので入れる
 
 ```
 brew install autoconf
