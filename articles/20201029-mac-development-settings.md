@@ -252,7 +252,7 @@ brew tap fumiyas/echo-sd
 brew install echo-sd
 ```
 
-### PostgresSQL
+## PostgresSQL
 
 ここから開発言語やデータベースなどを入れていきます。
 
@@ -268,7 +268,7 @@ brew install postgresql
 $ postgres --version
 postgres (PostgreSQL) 13.0
 
-### MySQL
+## MySQL
 
 ```
 brew install mysql
@@ -280,7 +280,7 @@ mysql  Ver 8.0.22 for osx10.15 on x86_64 (Homebrew)
 
 データベース起動は開発時に行うのでインストールだけします。
 
-### Python
+## Python
 
 pyenvを入れて最新バージョンを入れる。
 （brew doctorでのWarningが出るが無視）
@@ -308,7 +308,7 @@ fi
 
 フレームワークは適宜入れる。
 
-### Ruby
+## Ruby
 
 rbenvを入れて最新バージョンを入れる。
 
@@ -322,7 +322,7 @@ rbenv global 最新版
 フレームワークは適宜入れる。
 
 
-### PHP
+## PHP
 
 事前にPHPが使用する物を入れておく。
 先にpearを入れないとコンフィグレーションができないので下記を参考にpearを入れておく。
@@ -349,7 +349,7 @@ phpbrew install 最新版 +default +dbs +curl +openssl=/usr/local/Cellar/openssl
 フレームワークは適宜入れる。
 
 
-### Perl
+## Perl
 
 perlbrewを入れて最新バージョンを入れる。
 
