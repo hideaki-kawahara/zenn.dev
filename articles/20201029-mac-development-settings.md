@@ -241,7 +241,9 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/krb5/bin:$PATH"
 export PATH="/usr/local/opt/krb5/sbin:$PATH"
-export PATH="/usr/local/Cellar/openssl@1.1/1.1.1h/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 ```
 
 
