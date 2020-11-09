@@ -18,6 +18,5 @@ published: false
 
 ## テスト
 
-![テスト](IMG_0314.jpg)
 
 # 2段階認証
