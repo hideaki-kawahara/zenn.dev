@@ -19,10 +19,18 @@ MacBookを壊したので修理に出した。
   * Dockで、最近使ったアプリケーションをDockに表示を無効にする。
   * Spotlightのキーボードショートカットを無効にする。
 * 使わないけどファインダーですべてのファイルを表示にしておく。（コマンドラインで以下を入力する）
+* スクリーンショットの余白を消す。（コマンドラインで以下を入力する）
 
+ファイル表示
 ```
 defaults write com.apple.finder AppleShowAllFiles TRUE
 killall Finder
+```
+
+余白除去
+```
+defaults write com.apple.screencapture disable-shadow -boolean true
+killall SystemUIServer
 ```
 
 ## brew
