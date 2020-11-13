@@ -55,7 +55,7 @@ iPhone／Apple Watchから、別のiPhone／Apple Watchへの機種変更にと�
 このような記載があるので、午前2時から午前4時の間は機種変更は避けましょう。
 
 またPASMOにも機種変更には移行可能時間帯があるので注意が必要です。
-(https://www.pasmo.co.jp/mp/serviceguide/)[https://www.pasmo.co.jp/mp/serviceguide/]
+[https://www.pasmo.co.jp/mp/serviceguide/](https://www.pasmo.co.jp/mp/serviceguide/)
 
 > iPhone及びAndroid端末の機種変更手続き 5:00~翌0:50
 このような記載があるので、午前0時50分から午前5時の間は機種変更は避けましょう。
