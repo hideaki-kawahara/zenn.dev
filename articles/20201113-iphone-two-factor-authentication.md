@@ -34,6 +34,9 @@ LINEやSafariなどはキャッシュを消しておくとサイズが小さく�
 LINEが重い…キャッシュの蓄積が原因かも！ キャッシュを削除する方法
 [http://official-blog.line.me/ja/archives/72213176.html](http://official-blog.line.me/ja/archives/72213176.html)
 
+## iPhoneを探す
+iPhoneを探すをオフにしておきます。
+
 ## 各種アプリの移行
 同じユーザーで複数のスマートフォンにて起動を抑止しているアプリの移行をしないといけません。
 
