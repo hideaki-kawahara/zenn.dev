@@ -12,6 +12,10 @@ MacBookを壊したので修理に出した。
 そのため、macOSで開発環境を整え直します。
 もうすぐmacOS Big Surが出てしまうので（記載日2020年11月6日）、Catalinaでの対応方法を記載しておきます。
 
+2020年11月18日更新しました。
+巻末にmacOS Big Surに関する記述を追記しました。
+※Apple Silicon M1ではなく、Intel CPUでの動作確認です。
+
 ## 設定変更
 
 * システム環境設定で以下を変更する。
@@ -396,8 +400,14 @@ macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入�
 
 
 ## macOS Big Sur
+Apple Silicon M1ではなく、Intel CPUでの動作確認です。
 
-このようなWarningが出ます。
+
+### Docker
+Version 2.5.0.1(49550)で問題なく動作しております。
+
+### brew
+brewでは、このようなWarningが出ます。
 ```
 Warning: You are using macOS 11.0.
 We do not provide support for this released but not yet supported version.
@@ -410,6 +420,6 @@ released but not yet supported version.
 
 あと、CLTに関してエラーが出るので、下を参照してCLTを更新しておきます。
 
-(https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259)[https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259]
+[https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259](https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259)
 
 2020年11月18日現在、`CLT: 12.0.32.21`が`CLT: 12.2.0.0.1.1604076827`に変更されれば大丈夫です。
