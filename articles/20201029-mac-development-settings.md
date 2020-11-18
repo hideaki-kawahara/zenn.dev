@@ -393,3 +393,23 @@ perlbrew switch perl-最新版
 macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
 
 今後、macOS Big SurやApple Silicon Macになったとき、どんな感じで環境構築が変わるのだろうか？楽しみです。
+
+
+## macOS Big Sur
+
+このようなWarningが出ます。
+```
+Warning: You are using macOS 11.0.
+We do not provide support for this released but not yet supported version.
+You will encounter build failures with some formulae.
+Please create pull requests instead of asking for help on Homebrew's GitHub,
+Twitter or any other official channels. You are responsible for resolving
+any issues you experience while you are running this
+released but not yet supported version.
+```
+
+あと、CLTに関してエラーが出るので、下を参照してCLTを更新しておきます。
+
+(https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259)[https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259]
+
+2020年11月18日現在、`CLT: 12.0.32.21`が`CLT: 12.2.0.0.1.1604076827`に変更されれば大丈夫です。
