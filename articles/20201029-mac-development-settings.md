@@ -198,7 +198,7 @@ brew install unzip
 brew install tree
 ```
 
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 
 ```
 export PATH="/usr/local/opt/unzip/bin:$PATH"
@@ -214,7 +214,7 @@ brew install findutils
 brew install gnu-sed
 ```
 
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 
 ```
 export PATH="/usr/local/opt/curl/bin:$PATH"
@@ -244,7 +244,7 @@ brew install icu4c
 brew install krb5
 ```
 
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 ```
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
@@ -308,7 +308,7 @@ pyenv versions
 ```
 
 tumxを起動しているとpyenvが切り替わらないので
-.zshrcのtumx起動後にpyenv initを入れる。
+~/.zshrcのtumx起動後にpyenv initを入れる。
 
 ```
 export PYENV_ROOT="$HOME/.pyenv"
@@ -334,7 +334,7 @@ rbenv install 最新版
 rbenv global 最新版
 ```
 
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 ```
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 ```
@@ -349,7 +349,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 [https://qiita.com/applexco/items/f10e87477dc5d41cf751](https://qiita.com/applexco/items/f10e87477dc5d41cf751)
 
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 
 ```
 export PATH="/Users/ユーザー名/pear/bin:$PATH"
@@ -376,7 +376,7 @@ perlbrewを入れて最新バージョンを入れる。
 ```
 curl -L http://xrl.us/perlbrewinstall | bash
 ```
-インストール後.zshrcに以下の設定を入れる。
+インストール後~/.zshrcに以下の設定を入れる。
 
 ```
 source ~/perl5/perlbrew/etc/bashrc
@@ -392,6 +392,44 @@ perlbrew available
 perlbrew install --notest perl-最新版
 perlbrew switch perl-最新版
 ```
+
+## Node.js
+
+まずはnodebrewを入れます。
+```
+brew install nodebrew
+```
+
+インストール後~/.zshrcに以下の設定を入れる。
+
+```
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+```
+インストール後~/.nodebrewに以下の設定を入れる。
+
+```
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+```
+
+Node.js最新版を入れる。
+```
+mkdir -p ~/.nodebrew/src
+nodebrew install-binary stable
+nodebrew ls
+```
+
+最新版が入りました。
+```
+v14.15.1
+
+current: none
+```
+
+有効化されてないので有効化します。
+```
+nodebrew use v14.15.1
+```
+
 
 ## 終わりに
 macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
