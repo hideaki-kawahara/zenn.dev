@@ -425,14 +425,6 @@ macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入�
 
 
 ## macOS Big Sur
-Apple Silicon M1ではなく、Intel CPUでの動作についてです。
-
-macOS Catalinaでは、XCode Command Line Toolsを入れなくてもBrewが入ったのですが、残念ながらmacOS Big SurではXCode Command Line Toolsを入れないとCLTに関してエラーが出るので、下を参照してCLTを更新しておきます。
-
-[https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259](https://github.com/GoogleContainerTools/kpt/issues/962#issuecomment-727217259)
-
-2020年11月18日現在、`CLT: 12.0.32.21`が`CLT: 12.2.0.0.1.1604076827`に変更されれば大丈夫です。
-
 
 ### Docker
 Version 2.5.0.1(49550)で問題なく動作しております。
