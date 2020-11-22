@@ -400,6 +400,11 @@ perlbrew switch perl-最新版
 brew install nodebrew
 ```
 
+setupを実行します。
+```
+nodebrew setup
+```
+
 インストール後~/.zshrcに以下の設定を入れる。
 
 ```
@@ -430,6 +435,14 @@ current: none
 nodebrew use v14.15.1
 ```
 
+yarnを入れますが、nodeが入ってしまうので、Uninstallします。
+参考：
+(https://github.com/nijicha/install_nodejs_and_yarn_homebrew)[https://github.com/nijicha/install_nodejs_and_yarn_homebrew]
+
+```
+brew install yarn
+brew uninstall node --ignore-dependencies
+```
 
 ## 終わりに
 macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
