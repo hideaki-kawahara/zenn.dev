@@ -406,6 +406,12 @@ nodenv init
 eval "$(nodenv init -)"
 ```
 
+nodenv-yarn-installをインストールする。
+```
+mkdir -p "$(nodenv root)/plugins"
+git clone https://github.com/pine/nodenv-yarn-install.git "$(nodenv root)/plugins/nodenv-yarn-install"
+```
+
 インストールしたいバージョンを確認します。（すごい量が出る）
 ```
 nodenv install --list
@@ -416,6 +422,21 @@ nodenv install --list
 nodenv install 最新版
 nodenv rehash
 nodenv global 最新版
+```
+
+確認コマンドです。
+OKが出れば良いです。
+
+```
+curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
+```
+
+バージョン確認です。
+```
+node -v
+yarn -v
+npx -v
+npm -v
 ```
 
 ## 終わりに
