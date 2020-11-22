@@ -395,56 +395,28 @@ perlbrew switch perl-最新版
 
 ## Node.js
 
-まずはnodebrewを入れます。
+nodenvで入れます。
 ```
-brew install nodebrew
-```
-
-setupを実行します。
-```
-nodebrew setup
+brew install nodenv
+nodenv init
 ```
 
 インストール後~/.zshrcに以下の設定を入れる。
-
 ```
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-```
-インストール後~/.nodebrewに以下の設定を入れる。
-
-```
-export NODEBREW_ROOT=/usr/local/var/nodebrew
+eval "$(nodenv init -)"
 ```
 
-Node.js最新版を入れる。
+インストールしたいバージョンを確認します。（すごい量が出る）
 ```
-mkdir -p ~/.nodebrew/src
-nodebrew install-binary stable
-nodebrew ls
+nodenv install --list
 ```
 
-最新版が入りました。
+最新版を入れます。
 ```
-v14.15.1
-
-current: none
+nodenv install 最新版
+nodenv rehash
+nodenv global 最新版
 ```
-
-有効化されてないので有効化します。
-```
-nodebrew use v14.15.1
-```
-
-yarnを入れますが、nodeが入ってしまうので、Uninstallします。
-
-```
-brew install yarn
-brew uninstall node --ignore-dependencies
-```
-
-参考：
-[https://github.com/nijicha/install_nodejs_and_yarn_homebrew](https://github.com/nijicha/install_nodejs_and_yarn_homebrew)
-
 
 ## 終わりに
 macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
