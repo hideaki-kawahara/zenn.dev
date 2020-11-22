@@ -437,7 +437,7 @@ nodebrew use v14.15.1
 
 yarnを入れますが、nodeが入ってしまうので、Uninstallします。
 参考：
-(https://github.com/nijicha/install_nodejs_and_yarn_homebrew)[https://github.com/nijicha/install_nodejs_and_yarn_homebrew]
+[https://github.com/nijicha/install_nodejs_and_yarn_homebrew](https://github.com/nijicha/install_nodejs_and_yarn_homebrew)
 
 ```
 brew install yarn
