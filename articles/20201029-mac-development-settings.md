@@ -453,7 +453,7 @@ macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入�
 
 
 ## macOS Big Sur
-Apple Silicon M1ではなく、Intel CPUでの動作確認です。
+Apple Silicon M1ではなく、Intel CPUでの動作についてです。
 
 macOS Catalinaでは、XCode Command Line Toolsを入れなくてもBrewが入ったのですが、残念ながらmacOS Big SurではXCode Command Line Toolsを入れないとCLTに関してエラーが出るので、下を参照してCLTを更新しておきます。
 
