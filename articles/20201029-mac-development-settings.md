@@ -258,6 +258,8 @@ export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 ```
 
+libxml2を入れると、brewがPython3を入れてしまうんだよな。
+Pythonはpyenvで管理したいんだけどね・・・。
 
 ## 謎
 
