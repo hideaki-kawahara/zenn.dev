@@ -375,6 +375,11 @@ Defaultのvariantsにデータベースなどを追加して入れます。
 phpbrew install 最新版 +default +dbs +curl +openssl=/usr/local/Cellar/openssl@1.1/1.1.1h
 ```
 
+インストールしたら有効にする。
+```
+phpbrew switch 最新版
+```
+
 フレームワークは適宜入れる。
 
 
