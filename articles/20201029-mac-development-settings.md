@@ -145,6 +145,13 @@ brew cask install iterm2
 
 見やすい色に変更します。
 
+## Intel Power Gadget
+```
+brew cask install intel-power-gadget
+```
+
+再起動してくれと言われたら再起動します。
+
 ## tmux
 
 ここからコマンドライン関連です。
