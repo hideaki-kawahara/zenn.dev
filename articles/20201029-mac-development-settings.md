@@ -426,7 +426,9 @@ nodenv rehash
 nodenv global 最新版
 ```
 
-確認コマンドです。
+node-buildも自動的に入ります。
+
+次に確認コマンドです。
 OKが出れば良いです。
 
 ```
