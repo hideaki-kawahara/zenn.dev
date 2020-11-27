@@ -29,14 +29,14 @@ PHPBrewにPHP8.0.0対応版が出ておりました。
 phpbrew known --update
 ```
 しかしPHP8はでてきません。
-そのためinitを実行してから、knownをしてリリース情報を更新します。
+そのためinitを実行してから、再びknownでリリース情報を更新します。
 
 ```
 phpbrew init
 phpbrew known --update
 ```
 
-2020年11月27日現在、PHP8.0.0が出てくるので、PHP8.0.0をインストールします。
+updateするとPHP8.0.0が出てくるので（2020年11月27日現在）、PHP8.0.0をインストールします。
 
 ```
 phpbrew install 8.0.0 +default +dbs +curl +openssl=/usr/local/Cellar/openssl@1.1/1.1.1h
@@ -61,4 +61,4 @@ Zend Engine v4.0.0-dev, Copyright (c) Zend Technologies
 ```
 
 
-楽しいPHP LIFEを！楽しんでください。
+それでは楽しいPHP8 LIFEを楽しんでください。
