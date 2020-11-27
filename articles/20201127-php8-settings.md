@@ -8,7 +8,7 @@ published: True
 
 # PHP8が出た
 
-2020年11月26日にPHP8が正式にリリースされました。
+2020年11月26日にPHP8が正式リリースされました🎉！
 [https://www.php.net/archive/2020.php#2020-11-26-3](https://www.php.net/archive/2020.php#2020-11-26-3)
 
 色々と変わったPHP8を触ってみたいですよね？PHPBrewならできます。
