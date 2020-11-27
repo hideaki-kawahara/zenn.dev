@@ -2,7 +2,7 @@
 title: "PHPBrewでPHP8を入れる"
 emoji: "🐘"
 type: "tech"
-topics: ["PHPBrew", "mac", "PHP8"]
+topics: ["PHPBrew", "mac","PHP", "PHP8"]
 published: True
 ---
 
