@@ -14,7 +14,7 @@ published: True
 色々と変わったPHP8を触ってみたいですよね？PHPBrewならできます。
 
 
-## PHP8をインストールする。
+## PHP8をインストールする
 
 PHPBrewにPHP8.0.0対応版が出ておりました。
 [https://github.com/phpbrew/phpbrew/releases/tag/1.27.0](https://github.com/phpbrew/phpbrew/releases/tag/1.27.0)
