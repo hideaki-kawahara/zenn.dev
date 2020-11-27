@@ -20,7 +20,8 @@ PHPBrewにPHP8.0.0対応版が出ておりました。
 [https://github.com/phpbrew/phpbrew/releases/tag/1.27.0](https://github.com/phpbrew/phpbrew/releases/tag/1.27.0)
 
 以前の記事では、PHPBrewでPHPの環境を作っていたので、PHPBrewを使ってみたいと思います。
-[https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings](https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings)
+PHPBrewを使用していない人で、PHPBrewを使いたいと思ったなら、以前の記事をご確認ください。
+[https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings#php](https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings#php)
 
 
 オプションのknownでリリース情報を更新します、が・・・。
