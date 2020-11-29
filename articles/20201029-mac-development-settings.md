@@ -65,6 +65,7 @@ GUIアプリをコマンドでインストールするものです。
 * VS Code
 * Docker
 * iTerm2
+* Intel Power Gadget
 
 ## Google IME
 
@@ -107,6 +108,7 @@ brew cask install slack
 Zoomもcaskにあるのでコマンドラインからインストールします。
 zoomusなので注意！
 ログイン時にブラウザが起動します。
+2020年11月29日、caskから消えたのでインストールできなくなりました。
 
 ```
 brew cask install zoomus
@@ -137,7 +139,7 @@ brew install docker
 brew cask install docker
 ```
 
-## iterm2
+## iTerm2
 
 ```
 brew cask install iterm2
