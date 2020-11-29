@@ -8,7 +8,7 @@ published: True
 
 # PHP8が出た
 
-2020年11月26日にPHP8が正式リリースされました🎉！
+2020年11月26日にPHP8が正式リリースされました🎉
 [https://www.php.net/archive/2020.php#2020-11-26-3](https://www.php.net/archive/2020.php#2020-11-26-3)
 
 色々と変わったPHP8を触ってみたいですよね？PHPBrewならできます。
@@ -23,8 +23,7 @@ PHPBrewにPHP8.0.0対応版が出ておりました。
 PHPBrewを使用していない人で、PHPBrewを使いたいと思ったなら、以前の記事をご確認ください。
 [https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings#php](https://zenn.dev/sapi_kawahara/articles/20201029-mac-development-settings#php)
 
-
-オプションのknownでリリース情報を更新します、が・・・。
+すでにPHPBrewを使用した場合は、オプションのknownでリリース情報を更新します、が・・・。
 
 ```
 phpbrew known --update
