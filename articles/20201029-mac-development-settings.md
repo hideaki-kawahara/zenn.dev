@@ -106,12 +106,12 @@ brew cask install slack
 ## Zoom
 
 Zoomもcaskにあるのでコマンドラインからインストールします。
-zoomusなので注意！
+~~zoomusなので注意！~~
+**2020年11月29日よりzoomusからzoomに変更されました**。
 ログイン時にブラウザが起動します。
-2020年11月29日、caskから消えたのでインストールできなくなりました。
 
 ```
-brew cask install zoomus
+brew cask install zoom
 ```
 
 ## VSCode
