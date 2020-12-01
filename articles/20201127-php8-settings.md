@@ -90,6 +90,9 @@ opcache.jit_buffer_size=100M
 ベンチを動かしてみます。
 [https://github.com/php/php-src/blob/master/Zend/bench.php](https://github.com/php/php-src/blob/master/Zend/bench.php)
 
+検証機は「MacBook Pro 2019 13-inch 2.4GHz クアッドコアIntel Core i5」です。
+以下にPHP 8の結果を表示します。
+
 ```
 % php bench.php
 simple             0.002
@@ -114,7 +117,9 @@ strcat(200000)     0.002
 Total              0.097
 ```
 
-ちなみにPHP 7.4.13では、こんな感じです。
+もたつきが感じられません！！すごい！
+
+速度の差を感じたいので、PHP 7.4.13でも動かしてみます。
 ```
 % php bench.php
 simple             0.023
@@ -138,5 +143,5 @@ strcat(200000)     0.004
 ------------------------
 Total              0.553
 ```
-
+PHP8は5倍近い速度で動きますね。
 想像以上にPHP8のJITは早いですねー。
