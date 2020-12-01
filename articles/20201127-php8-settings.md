@@ -62,3 +62,81 @@ Zend Engine v4.0.0-dev, Copyright (c) Zend Technologies
 
 
 それでは楽しいPHP8 LIFEを楽しんでください。
+
+## JITの検証
+
+デフォルトではJITは有効になっていません。
+JITを有効にするには設定ファイルをいじります。
+```
+~/.phpbrew/php/php-8.0.0/etc/php.ini
+```
+
+コメントを外します。
+```
+zend_extension=opcache
+```
+
+0を1に変更します。
+```
+opcache.enable_cli=1
+```
+
+追記します。
+```
+opcache.jit=on
+opcache.jit_buffer_size=100M
+```
+
+ベンチを動かしてみます。
+[https://github.com/php/php-src/blob/master/Zend/bench.php](https://github.com/php/php-src/blob/master/Zend/bench.php)
+
+```
+% php bench.php
+simple             0.002
+simplecall         0.001
+simpleucall        0.001
+simpleudcall       0.001
+mandel             0.007
+mandel2            0.008
+ackermann(7)       0.008
+ary(50000)         0.004
+ary2(50000)        0.005
+ary3(2000)         0.008
+fibo(30)           0.019
+hash1(50000)       0.006
+hash2(500)         0.005
+heapsort(20000)    0.007
+matrix(20)         0.005
+nestedloop(12)     0.003
+sieve(30)          0.004
+strcat(200000)     0.002
+------------------------
+Total              0.097
+```
+
+ちなみにPHP 7.4.13では、こんな感じです。
+```
+% php bench.php
+simple             0.023
+simplecall         0.009
+simpleucall        0.024
+simpleudcall       0.024
+mandel             0.086
+mandel2            0.099
+ackermann(7)       0.025
+ary(50000)         0.006
+ary2(50000)        0.006
+ary3(2000)         0.041
+fibo(30)           0.085
+hash1(50000)       0.011
+hash2(500)         0.007
+heapsort(20000)    0.025
+matrix(20)         0.022
+nestedloop(12)     0.043
+sieve(30)          0.013
+strcat(200000)     0.004
+------------------------
+Total              0.553
+```
+
+想像以上にPHP8のJITは早いですねー。
