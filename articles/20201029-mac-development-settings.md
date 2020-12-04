@@ -114,6 +114,13 @@ Zoomもcaskにあるのでコマンドラインからインストールします
 brew cask install zoom
 ```
 
+zoomusでインストールしているときは、一度アンインストールしてください。
+```
+brew uninstall zoomus
+brew install zoom
+```
+
+
 ## VSCode
 
 VSCodeもcaskにあるのでコマンドラインからインストールします。
