@@ -137,6 +137,7 @@ brew cask install visual-studio-code
 ```
 brew install docker
 brew cask install docker
+brew install docker-machine
 ```
 
 ## iTerm2
