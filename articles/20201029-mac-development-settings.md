@@ -72,7 +72,7 @@ GUIアプリをコマンドでインストールするものです。
 再起動が必要なGoogle IMEを入れます。
 
 ```
-brew cask install google-japanese-ime
+brew install --cask google-japanese-ime
 ```
 
 システム環境設定から設定を行ってから起動すると再起動を要求されるので再起動します。
@@ -84,7 +84,7 @@ brew cask install google-japanese-ime
 これでSafariを起動せずにChromeを入れることができます。
 
 ```
-brew cask install google-chrome
+brew install --cask google-chrome
 ```
 
 起動は以下のコマンドを実行します。
@@ -100,7 +100,7 @@ open /Applications/Google\ Chrome.app/
 ログイン時にブラウザが起動します。
 
 ```
-brew cask install slack
+brew install --cask slack
 ```
 
 ## Zoom
@@ -111,13 +111,13 @@ Zoomもcaskにあるのでコマンドラインからインストールします
 ログイン時にブラウザが起動します。
 
 ```
-brew cask install zoom
+brew install --cask zoom
 ```
 
 zoomusでインストールしているときは、一度アンインストールしてください。
 ```
 brew uninstall zoomus
-brew install zoom
+brew install --cask zoom
 ```
 
 
@@ -126,7 +126,7 @@ brew install zoom
 VSCodeもcaskにあるのでコマンドラインからインストールします。
 
 ```
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 ```
 
 ### 設定ファイル
@@ -143,21 +143,21 @@ brew cask install visual-studio-code
 
 ```
 brew install docker
-brew cask install docker
+brew install --cask docker
 brew install docker-machine
 ```
 
 ## iTerm2
 
 ```
-brew cask install iterm2
+brew install --cask iterm2
 ```
 
 見やすい色に変更します。
 
 ## Intel Power Gadget
 ```
-brew cask install intel-power-gadget
+brew install --cask intel-power-gadget
 ```
 
 再起動してくれと言われたら再起動します。
