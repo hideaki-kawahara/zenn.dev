@@ -355,6 +355,7 @@ rbenv global 最新版
 
 インストール後~/.zshrcに以下の設定を入れる。
 ```
+eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 ```
 
