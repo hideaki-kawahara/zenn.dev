@@ -478,15 +478,3 @@ macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入�
 ### Docker
 Version 2.5.0.1(49550)で問題なく動作しております。
 
-### brew
-brewでは、このようなWarningが出ます。
-```
-Warning: You are using macOS 11.0.
-We do not provide support for this released but not yet supported version.
-You will encounter build failures with some formulae.
-Please create pull requests instead of asking for help on Homebrew's GitHub,
-Twitter or any other official channels. You are responsible for resolving
-any issues you experience while you are running this
-released but not yet supported version.
-```
-
