@@ -419,6 +419,7 @@ perlbrew switch perl-最新版
 ```
 
 ## Node.js
+2021年2月14日更新：brewで入るnode-build(4.9.29)がgccを要求して、gccはXcode Command Line Tool(CLT)を要求してくるので、この章では、この方法が使用できません。
 
 nodenvで入れます。
 ```
