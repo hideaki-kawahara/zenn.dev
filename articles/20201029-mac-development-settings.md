@@ -468,7 +468,9 @@ npm -v
 ```
 
 ## 終わりに
-macOS Catalinaになってから、XcodeやXCode Command Line Toolsなどを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
+macOS Catalinaになってから、XcodeやXCode Command Line Tools(CLT)などを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
+
+残念ながら、node-build(4.9.29)からはgccが必須になり、その影響でXCode Command Line Tools(CLT)が必須になりました。
 
 今後、macOS Big SurやApple Silicon Macになったとき、どんな感じで環境構築が変わるのだろうか？楽しみです。
 
