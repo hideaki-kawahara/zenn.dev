@@ -16,6 +16,10 @@ MacBookを壊したので修理に出した。
 巻末にmacOS Big Surに関する記述を追記しました。
 ※Apple Silicon M1ではなく、Intel CPUでの動作確認です。
 
+2021年2月以降から、gcc必須が増えてました。
+そのため、node-build(4.9.29)とPython3.9からはgccが必須になり、その影響でXCode Command Line Tools(CLT)が必須になりました。
+brewを使用する前にはXCode Command Line Tools(CLT)のインストールが必須です。
+
 ## 設定変更
 
 * システム環境設定で以下を変更する。
@@ -315,6 +319,7 @@ mysql  Ver 8.0.22 for osx10.15 on x86_64 (Homebrew)
 データベース起動は開発時に行うのでインストールだけします。
 
 ## Python
+2021年2月28日更新：brewで入るPython3.9がgccを要求して、gccはXcode Command Line Tool(CLT)を要求してくるので、この章では、この方法が使用できません。
 
 pyenvを入れて最新バージョンを入れる。
 （brew doctorでのWarningが出るが無視）
@@ -470,7 +475,8 @@ npm -v
 ## 終わりに
 macOS Catalinaになってから、XcodeやXCode Command Line Tools(CLT)などを入れなくても、brewを入れることができるようになり、初期設定の時間が少しだけ短縮できるようになりました。
 
-残念ながら、node-build(4.9.29)からはgccが必須になり、その影響でXCode Command Line Tools(CLT)が必須になりました。
+上のように記載しましたが、2021年2月以降から、gcc必須が増えてました。
+そのため、node-build(4.9.29)とPython3.9からはgccが必須になり、その影響でXCode Command Line Tools(CLT)が必須になりました。
 
 今後、macOS Big SurやApple Silicon Macになったとき、どんな感じで環境構築が変わるのだろうか？楽しみです。
 
